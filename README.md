@@ -15,14 +15,14 @@ Proyek ini bertujuan untuk menganalisis faktor-faktor yang memengaruhi popularit
 3. [Analysis and Code](#analysis-and-code)  
 4. [Storyboard](#storyboard)  
 5. [Dependencies](#dependencies)  
-6. [Tutorial](#tutorial)  
+6. [Langkah Instalasi](#langkah-instalasi)  
 7. [Summary](#summary)  
 8. [Results](#results)  
 9. [Team Members](#team-members)
 
 ---
 
-##**About**
+## **About**
 
 Musik adalah bagian penting dalam kehidupan kita sehari-hari. Analisis ini bertujuan untuk memahami faktor-faktor utama yang memengaruhi popularitas lagu di Spotify. Kami menganalisis fitur audio seperti *danceability*, *energy*, *valence*, dan *tempo* untuk mencari pola yang dapat membantu artis dan produser dalam menciptakan lagu yang sesuai dengan tren.  
 
@@ -53,8 +53,6 @@ Variable utama yang digunakan dalam analisis ini:
 | `release_year`  | Tahun perilisan lagu.      
 
 Kolom baru yang dibuat untuk analisis:
-# Additional Dataset Columns Description
-
 | Column Name              | Description                                                                                       |
 |--------------------------|---------------------------------------------------------------------------------------------------|
 | `release_decade`         | Dekade rilis lagu berdasarkan `release_year`, dihitung dengan membulatkan tahun rilis ke dekade terdekat. |
@@ -96,7 +94,7 @@ Kode lengkap dapat ditemukan di direktori `notebooks/` dan `src/`.
    Mengeksplorasi pola distribusi dan hubungan antar fitur.  
 
 3. **Pembuatan Variabel Baru:**  
-   Menambahkan kolom seperti `popularity_score_per_year` untuk menambah wawasan.  
+   Menambahkan kolom seperti `popularity_score_per_year` untuk menambah informasi atau wawasan.  
 
 4. **Visualisasi Hasil:**  
    Menyajikan data dalam bentuk grafik dan temuan utama.
@@ -112,32 +110,27 @@ Proyek ini menggunakan pustaka berikut:
 - `seaborn`  
 - `datetime`
 
-Instal semua pustaka dengan perintah:
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
-## 📚 **Tutorial**
+## **Langkah Instalasi**
 
 1. Clone repositori ini:
    ```bash
    git clone https://github.com/Jasm1nPtr/Spotify-Songs-Data-Analysis.git
-   cd spotify-songs-analysis
    ```
 2. Install Repositoris:
    ```bash
-   jupyter notebook notebooks/EDA.ipynb
+   cd Spotify-Songs-Data-Analysis
+   pip install -r requirements.txt
    ```
-3. Jalankan pembuatan variabel baru:
+3. Jalankan Jupyter Notebook:
    ```bash
-   jupyter notebook notebooks/feature_engineering.ipynb
+   jupyter notebook
    ```
 
 ---
 
-##**Summary**
+## **Summary**
 
 Proyek ini memberikan wawasan menarik tentang popularitas lagu di Spotify. Temuan utama:
 - Genre **Pop** dan **EDM** adalah genre paling populer.  
