@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 1. Clone repositori ini:
    ```bash
-   git clone https://github.com/username/spotify-songs-analysis.git
+   git clone https://github.com/Jasm1nPtr/Spotify-Songs-Data-Analysis.git
    cd spotify-songs-analysis
    ```
 2. Jalankan analisis EDA:
