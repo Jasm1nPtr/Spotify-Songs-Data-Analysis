@@ -1,10 +1,15 @@
-# 🎶 **Spotify Songs Analysis**
+<h1 align="center">Spotify Songs Analysis</h1>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4b615d47-5f0d-4c30-8183-4a1f917f75cb" width="400" height="200" alt="Spotify Logo">
+</p>
+
+
 
 Proyek ini bertujuan untuk menganalisis faktor-faktor yang memengaruhi popularitas lagu di Spotify. Dengan memanfaatkan dataset Spotify, kami mengeksplorasi hubungan antara fitur audio seperti *danceability*, *energy*, *valence*, dan *tempo* dengan tingkat popularitas lagu. Proyek ini memberikan wawasan yang relevan bagi artis, produser musik, dan playlist creator.
 
 ---
 
-## 📌 **Table of Contents**
+## **Table of Contents**
 1. [About](#about)  
 2. [Dataset](#dataset)  
 3. [Analysis and Code](#analysis-and-code)  
@@ -17,7 +22,7 @@ Proyek ini bertujuan untuk menganalisis faktor-faktor yang memengaruhi popularit
 
 ---
 
-## 💡 **About**
+##**About**
 
 Musik adalah bagian penting dalam kehidupan kita sehari-hari. Analisis ini bertujuan untuk memahami faktor-faktor utama yang memengaruhi popularitas lagu di Spotify. Kami menganalisis fitur audio seperti *danceability*, *energy*, *valence*, dan *tempo* untuk mencari pola yang dapat membantu artis dan produser dalam menciptakan lagu yang sesuai dengan tren.  
 
@@ -25,18 +30,42 @@ Hasilnya menunjukkan bahwa genre **Pop** dan **EDM** mendominasi popularitas, se
 
 ---
 
-## 📊 **Dataset**
+## **Dataset**
 
 Dataset yang digunakan adalah **Spotify Dataset**, yang mencakup informasi seperti popularitas lagu, fitur audio, genre, dan tahun rilis. Dataset ini tersedia secara publik melalui komunitas *TidyTuesday*.  
 
 - **Sumber**: [Spotify Dataset on TidyTuesday](https://github.com/rfordatascience/tidytuesday).  
 - **Download Dataset**: [Klik di sini](https://www.dropbox.com/sh/qj0ueimxot3ltbf/AACzMOHv7sZCJsj3ErjtOG7ya?dl=1).  
 
-Dataset ini telah dibersihkan dan disesuaikan untuk analisis lebih lanjut.
+Variable utama yang digunakan dalam analisis ini: 
+
+| Column Name     | Description                                                        |
+|-----------------|--------------------------------------------------------------------|
+| `track_id`      | ID unik yang mewakili setiap lagu dalam database Spotify.          |
+| `track_name`    | Nama dari lagu yang dianalisis.                                    |
+| `artist_name`   | Nama artis atau grup yang membawakan lagu.                         |
+| `popularity`    | Skor popularitas lagu berdasarkan metrik Spotify (skala 0-100).    |
+| `danceability`  | Ukuran sejauh mana sebuah lagu cocok digunakan sebagai musik dansa (nilai 0 hingga 1). |
+| `energy`        | Tingkat intensitas atau semangat sebuah lagu (nilai 0 hingga 1).   |
+| `acousticness`  | Tingkat kemungkinan bahwa sebuah lagu adalah akustik (nilai 0 hingga 1). |
+| `tempo`         | Kecepatan beat lagu dalam satuan BPM (beats per minute).           |
+| `duration_ms`   | Lama durasi sebuah lagu dalam satuan milidetik.                   |
+| `release_year`  | Tahun perilisan lagu.      
+
+Kolom baru yang dibuat untuk analisis:
+# Additional Dataset Columns Description
+
+| Column Name              | Description                                                                                       |
+|--------------------------|---------------------------------------------------------------------------------------------------|
+| `release_decade`         | Dekade rilis lagu berdasarkan `release_year`, dihitung dengan membulatkan tahun rilis ke dekade terdekat. |
+| `danceability_score`     | Kategori danceability: Low (<0.4), Medium (0.4-0.7), High (≥0.7)|
+| `popularity_segment`     | Kategori popularitas berdasarkan skor: Low (<33), Medium (33-66), High (≥66)|
+| `energy_acoustic_mix`    |Menggabungkan `energy` dan `acousticness` untuk klasifikasi lagu|
+| `popularity_score_per_year` | Rasio skor popularitas lagu terhadap jumlah tahun sejak dirilis|
 
 ---
 
-## 📈 **Analysis and Code**
+## **Analysis and Code**
 
 Analisis dilakukan melalui beberapa langkah:
 1. **Exploratory Data Analysis (EDA):**  
@@ -58,7 +87,7 @@ Kode lengkap dapat ditemukan di direktori `notebooks/` dan `src/`.
 
 ---
 
-## 🎨 **Storyboard**
+## **Storyboard**
 
 1. **Definisi Masalah:**  
    Mengidentifikasi faktor yang memengaruhi popularitas lagu di Spotify.  
@@ -74,7 +103,7 @@ Kode lengkap dapat ditemukan di direktori `notebooks/` dan `src/`.
 
 ---
 
-## 🛠️ **Dependencies**
+## **Dependencies**
 
 Proyek ini menggunakan pustaka berikut:  
 - `pandas`  
@@ -97,7 +126,7 @@ pip install -r requirements.txt
    git clone https://github.com/Jasm1nPtr/Spotify-Songs-Data-Analysis.git
    cd spotify-songs-analysis
    ```
-2. Jalankan analisis EDA:
+2. Install Repositoris:
    ```bash
    jupyter notebook notebooks/EDA.ipynb
    ```
@@ -108,7 +137,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📝 **Summary**
+##**Summary**
 
 Proyek ini memberikan wawasan menarik tentang popularitas lagu di Spotify. Temuan utama:
 - Genre **Pop** dan **EDM** adalah genre paling populer.  
@@ -117,7 +146,7 @@ Proyek ini memberikan wawasan menarik tentang popularitas lagu di Spotify. Temua
 
 ---
 
-## 🏆 **Results**
+## **Results**
 
 1. **Danceability vs Popularity:**  
    Lagu dengan danceability tinggi memiliki rata-rata popularitas yang lebih tinggi.  
@@ -130,7 +159,7 @@ Proyek ini memberikan wawasan menarik tentang popularitas lagu di Spotify. Temua
 
 ---
 
-## 👥 **Team Members**
+## **Team Members**
 
 1. [Jasmin Putri Jelita](https://github.com/Jasm1nPtr)  - 202110370311075
 2. [Thyara Mahadewi](https://github.com/thyaraa)  - 202110370311069
